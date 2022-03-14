@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>NPS now</title>
+  </head>
+  <body>
+    <div class="mb-10 block">
+      <h1 class="is-size-1">NPS now</h1>
+    </div>
+
+    <div class="columns has-background-success block pt-10 has-text-centered">
+      <div class="column">
+        <label for="current-rating">My current rating is </label>
+        <input type="number" id="current-rating" name="current-rating" />
+      </div>
+      <div class="column">
+        <label for="current-total">My current total number of surveys</label>
+        <input type="number" id="current-total" name="current-total" />
+      </div>
+    </div>
+    <h2 class="is-size-2 has-text-centered has-text-danger-dark">
+      I want to ...
+    </h2>
+
+    <div class="has-background-warning block box">
+      <h3 class="has-text-centered mr-1 ml-auto is-size-3 has-text-link-dark">
+        calculate the effect of the number of each survey rating on my overall
+        rating
+      </h3>
+      <ul class="columns">
+        <li class="column clip">
+          <input type="number" id="1" />
+          <div data-number="1" id="one" class="is-flex clip-stars">
+            <div class="clip-star"></div>
+          </div>
+        </li>
+        <li class="column clip">
+          <input type="number" id="2" />
+          <div data-number="2" id="two" class="is-flex clip-stars">
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+          </div>
+        </li>
+        <li class="column clip">
+          <input type="number" id="3" />
+          <div data-number="3" id="three" class="is-flex clip-stars">
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+          </div>
+        </li>
+        <li class="column clip">
+          <input type="number" id="4" />
+          <div data-number="4" id="four" class="is-flex clip-stars">
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+          </div>
+        </li>
+        <li class="column clip">
+          <input type="number" id="5" />
+          <div data-number="5" id="five" class="is-flex clip-stars">
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+            <div class="clip-star"></div>
+          </div>
+        </li>
+      </ul>
+
+      <button type="button" id="calculate-new-btn" class="button is-success">
+        will get me to
+      </button>
+      <div class="is-flex ml-2">
+        <p id="result1" class="has-text-info-dark is-size-5"></p>
+        <p>stars</p>
+      </div>
+    </div>
+    <br />
+    <!--  -->
+    <div class="has-background-light block box">
+      <h3 class="is-size-3 has-text-link-dark">
+        calculate the effect of the total number of an average survey rating on
+        my total rating
+      </h3>
+      <input type="number" id="average" />
+      <p>surveys with an average of (select one)</p>
+      <ul class="rating is-flex" id="ratings-select">
+        <li class="rating-item" data-rate="1"></li>
+        <li class="rating-item" data-rate="2"></li>
+        <li class="rating-item active" data-rate="3"></li>
+        <li class="rating-item" data-rate="4"></li>
+        <li class="rating-item" data-rate="5"></li>
+      </ul>
+      <div class="is-flex">
+        <p>will get me to</p>
+        <p id="result2" class="ml-2 has-text-info-dark is-size-5"></p>
+        <p class="ml-2">stars</p>
+      </div>
+    </div>
+    <br />
+    <!--  -->
+    <div class="has-background-warning block box">
+      <h3 class="is-size-3 has-text-link-dark">
+        calculate the total number of 5 star surveys to get me to a target
+        overall rating
+      </h3>
+      <div class="is-flex">
+        <p>if i want to be at</p>
+        <input type="number" id="tobeat" class="ml-4" />
+      </div>
+      <button type="button" id="tobeatBtn" class="button is-success">
+        i need
+      </button>
+      <div class="is-flex ml-4">
+        <p id="result3" class="mr-3 has-text-info-dark is-size-5"></p>
+        <div class="is-flex">
+          <div class="clip-star"></div>
+          <div class="clip-star"></div>
+          <div class="clip-star"></div>
+          <div class="clip-star"></div>
+          <div class="clip-star"></div>
+        </div>
+        <p class="ml-1">surveys</p>
+      </div>
+    </div>
+
+    <script src="./assets/script/script.js"></script>
+  </body>
+  <footer class="footer content has-text-centered">
+    Made with ❤️ by tarek
+  </footer>
+</html>
