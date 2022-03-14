@@ -53,7 +53,7 @@ starRatingContainer.onclick = async (e) => {
   // console.log(d);
   let x = c / d;
   console.log(x);
-  let zz = x.toFixed(0);
+  let zz = x.toFixed(2);
   result2.innerHTML = zz;
 };
 
